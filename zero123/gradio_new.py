@@ -654,7 +654,7 @@ def run_demo(
                                     0.0, 180.0, 0.0),
                        inputs=preset_inputs, outputs=preset_outputs)
 
-    demo.launch(enable_queue=True, share=True)
+    demo.launch(enable_queue=True, share=True, server_name='0.0.0.0')
 
 
 if __name__ == '__main__':

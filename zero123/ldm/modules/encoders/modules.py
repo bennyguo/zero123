@@ -306,6 +306,7 @@ class ClipImageProjector(AbstractEncoder):
 
     def preprocess(self, x):
         # Expects inputs in the range -1, 1
+        # FIXME: exceeds the range of (-1, 1)
         x = kornia.geometry.resize(x, (224, 224),
                                    interpolation='bicubic',align_corners=True,
                                    antialias=self.antialias)
